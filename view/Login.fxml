@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="400.0" prefWidth="400.0" xmlns="http://javafx.com/javafx/8.0.65" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.kmsi.controller.LoginController">
+   <children>
+      <Label layoutX="19.0" layoutY="7.0" text="Keluarga Mahasiswa Sistem Informasi">
+         <font>
+            <Font size="22.0" />
+         </font>
+      </Label>
+      <Label layoutX="155.0" layoutY="93.0" text="LOGIN" AnchorPane.topAnchor="93.0">
+         <font>
+            <Font size="22.0" />
+         </font>
+      </Label>
+      <TextField fx:id="usernameTF" layoutX="88.0" layoutY="137.0" onAction="#login" prefHeight="25.0" prefWidth="200.0" promptText="Username" />
+      <Button layoutX="233.0" layoutY="245.0" mnemonicParsing="false" onAction="#login" text="Login">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Button>
+      <Label fx:id="labelAkunInvalid" layoutX="88.0" layoutY="223.0" text="*Account Invalid" textFill="#943737" visible="false" />
+      <Label layoutX="121.0" layoutY="39.0" text="Institut Teknologi Del" textFill="#8a8a8a" AnchorPane.leftAnchor="121.0">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <PasswordField fx:id="passwordTF" layoutX="88.0" layoutY="188.0" onAction="#login" prefHeight="25.0" prefWidth="200.0" promptText="Password" />
+   </children>
+</AnchorPane>

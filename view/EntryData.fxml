@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Hyperlink?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="700.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/8.0.65" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.kmsi.controller.EntryDataController">
+   <children>
+      <TabPane layoutX="-11.0" layoutY="11.0" prefHeight="715.0" prefWidth="550.0" tabClosingPolicy="UNAVAILABLE">
+        <tabs>
+          <Tab text="Add Mahasiswa">
+            <content>
+              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <TextField fx:id="namaMhsTF" layoutX="21.0" layoutY="13.0" prefHeight="25.0" prefWidth="227.0" promptText="nama lengkap" />
+                        <TextField fx:id="nimTF" layoutX="21.0" layoutY="53.0" prefHeight="25.0" prefWidth="227.0" promptText="nim" />
+                        <ComboBox fx:id="cboxJKMhs" layoutX="21.0" layoutY="93.0" prefHeight="25.0" prefWidth="118.0" promptText="jenis kelamin" />
+                        <TextArea fx:id="alamatMhsTA" layoutX="21.0" layoutY="213.0" prefHeight="71.0" prefWidth="227.0" promptText="alamat" />
+                        <ComboBox fx:id="cboxKelasMhs" layoutX="21.0" layoutY="378.0" prefHeight="25.0" prefWidth="118.0" promptText="kelas" />
+                        <TextField fx:id="angkatanTF" layoutX="21.0" layoutY="458.0" prefHeight="25.0" prefWidth="227.0" promptText="angkatan" />
+                        <TextField fx:id="usernameMhsTF" layoutX="21.0" layoutY="498.0" prefHeight="25.0" prefWidth="227.0" promptText="username" />
+                        <TextField fx:id="passwordMhsTF" layoutX="21.0" layoutY="538.0" prefHeight="25.0" prefWidth="227.0" promptText="password" />
+                        <TextField fx:id="emailAkademikMhsTF" layoutX="21.0" layoutY="578.0" prefHeight="25.0" prefWidth="227.0" promptText="email akademik" />
+                        <TextField fx:id="tmpLahirMhsTF" layoutX="21.0" layoutY="133.0" prefHeight="25.0" prefWidth="227.0" promptText="tempat lahir" />
+                        <TextField fx:id="agamaMhsTF" layoutX="21.0" layoutY="338.0" prefHeight="25.0" prefWidth="227.0" promptText="agama" />
+                        <ComboBox fx:id="cboxTglLahir" layoutX="21.0" layoutY="173.0" prefHeight="25.0" prefWidth="109.0" promptText="tanggal lahir" />
+                        <ComboBox fx:id="cboxBulanLahir" layoutX="139.0" layoutY="173.0" prefHeight="25.0" prefWidth="99.0" promptText="bulan lahir" />
+                        <ComboBox fx:id="cboxTahunLahir" layoutX="248.0" layoutY="173.0" prefHeight="25.0" prefWidth="99.0" promptText="tahun lahir" />
+                        <TextField fx:id="asalSekolahTF" layoutX="21.0" layoutY="298.0" prefHeight="25.0" prefWidth="227.0" promptText="asal sekolah" />
+                        <Button layoutX="149.0" layoutY="629.0" mnemonicParsing="false" onAction="#addMahasiswa" text="Add Mahasiswa" />
+                        <Button layoutX="265.0" layoutY="578.0" mnemonicParsing="false" onAction="#browseMhs" text="Browse Foto..." />
+                        <Label fx:id="labelPathMhs" layoutX="373.0" layoutY="582.0" text="..." />
+                        <TextField fx:id="dosenWaliTF" layoutX="21.0" layoutY="418.0" prefHeight="25.0" prefWidth="227.0" promptText="dosen wali" />
+                     </children>
+                  </AnchorPane>
+            </content>
+          </Tab>
+          <Tab text="Add Dosen">
+            <content>
+              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <TextField fx:id="namaDosenTF" layoutX="21.0" layoutY="12.0" prefHeight="25.0" prefWidth="227.0" promptText="nama lengkap" />
+                        <TextField fx:id="nidTF" layoutX="21.0" layoutY="52.0" prefHeight="25.0" prefWidth="227.0" promptText="nid" />
+                        <ComboBox fx:id="cboxJKDosen" layoutX="21.0" layoutY="92.0" prefHeight="25.0" prefWidth="118.0" promptText="jenis kelamin" />
+                        <TextArea fx:id="alamatDosenTA" layoutX="21.0" layoutY="221.0" prefHeight="71.0" prefWidth="227.0" promptText="alamat" />
+                        <TextField fx:id="agamaDosenTF" layoutX="21.0" layoutY="181.0" prefHeight="25.0" prefWidth="227.0" promptText="agama" />
+                        <TextField fx:id="usernameDosenTF" layoutX="21.0" layoutY="346.0" prefHeight="25.0" prefWidth="227.0" promptText="username" />
+                        <TextField fx:id="emailAkademikDosenTF" layoutX="21.0" layoutY="306.0" prefHeight="25.0" prefWidth="227.0" promptText="email akademik" />
+                        <TextField fx:id="passwordDosenTF" layoutX="21.0" layoutY="386.0" prefHeight="25.0" prefWidth="227.0" promptText="password" />
+                        <Button layoutX="173.0" layoutY="476.0" mnemonicParsing="false" onAction="#addDosen" text="Add Dosen" />
+                        <Button layoutX="21.0" layoutY="426.0" mnemonicParsing="false" onAction="#browseDosen" text="Browse Foto..." />
+                        <Label fx:id="labelPathDosen" layoutX="125.0" layoutY="430.0" text="..." />
+                        <ComboBox fx:id="cboxTglLahirDosen" layoutX="21.0" layoutY="134.0" prefHeight="25.0" prefWidth="109.0" promptText="tanggal lahir" />
+                        <ComboBox fx:id="cboxBulanLahirDosen" layoutX="139.0" layoutY="134.0" prefHeight="25.0" prefWidth="99.0" promptText="bulan lahir" />
+                        <ComboBox fx:id="cboxTahunLahirDosen" layoutX="248.0" layoutY="134.0" prefHeight="25.0" prefWidth="99.0" promptText="tahun lahir" />
+                     </children>
+                  </AnchorPane>
+            </content>
+          </Tab>
+            <Tab text="Add Roster">
+               <content>
+                  <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <ComboBox fx:id="cboxHari" layoutX="21.0" layoutY="92.0" prefHeight="25.0" prefWidth="118.0" promptText="hari" />
+                        <TextField fx:id="mataKuliahTF" layoutX="21.0" layoutY="171.0" prefHeight="25.0" prefWidth="227.0" promptText="mata kuliah" />
+                        <TextField fx:id="tempatTF" layoutX="21.0" layoutY="251.0" prefHeight="25.0" prefWidth="227.0" promptText="tempat" />
+                        <TextField fx:id="pukulTF" layoutX="21.0" layoutY="211.0" prefHeight="25.0" prefWidth="227.0" promptText="pukul" />
+                        <TextField fx:id="dosenPengajarTF" layoutX="21.0" layoutY="291.0" prefHeight="25.0" prefWidth="227.0" promptText="dosen pengajar" />
+                        <Button layoutX="173.0" layoutY="344.0" mnemonicParsing="false" onAction="#addRoster" text="Add Roster" />
+                        <ComboBox fx:id="cboxWeek" layoutX="21.0" layoutY="12.0" prefHeight="25.0" prefWidth="73.0" promptText="week" />
+                        <ComboBox fx:id="cboxKelasRoster" layoutX="21.0" layoutY="52.0" prefHeight="25.0" prefWidth="125.0" promptText="kelas" />
+                        <DatePicker fx:id="datePick" layoutX="21.0" layoutY="132.0" promptText="tanggal" />
+                     </children>
+                  </AnchorPane>
+               </content>
+            </Tab>
+        </tabs>
+      </TabPane>
+      <Hyperlink layoutX="671.0" layoutY="11.0" onAction="#backHome" text="Back Home">
+         <font>
+            <Font name="System Bold" size="13.0" />
+         </font></Hyperlink>
+   </children>
+</AnchorPane>

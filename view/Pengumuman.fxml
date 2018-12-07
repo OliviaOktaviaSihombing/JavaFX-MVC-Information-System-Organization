@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Hyperlink?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.ToolBar?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="700.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/8.0.65" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.kmsi.controller.PengumumanController">
+   <children>
+      <ToolBar layoutX="-1.0" layoutY="79.0" prefHeight="54.0" prefWidth="800.0">
+        <items>
+          <Button mnemonicParsing="false" onAction="#home" prefHeight="44.0" prefWidth="70.0" text="HOME">
+               <font>
+                  <Font name="System Bold" size="15.0" />
+               </font>
+            </Button>
+            <Button defaultButton="true" mnemonicParsing="false" prefHeight="44.0" prefWidth="148.0" text="PENGUMUMAN">
+               <font>
+                  <Font name="System Bold" size="15.0" />
+               </font>
+            </Button>
+            <Button mnemonicParsing="false" onAction="#forum" prefHeight="44.0" prefWidth="85.0" text="FORUM">
+               <font>
+                  <Font name="System Bold" size="15.0" />
+               </font>
+            </Button>
+            <Button mnemonicParsing="false" onAction="#profil" prefHeight="44.0" prefWidth="81.0" text="PROFIL">
+               <font>
+                  <Font name="System Bold" size="15.0" />
+               </font>
+            </Button>
+            <Button mnemonicParsing="false" onAction="#galery" prefHeight="44.0" prefWidth="88.0" text="GALERY">
+               <font>
+                  <Font name="System Bold" size="15.0" />
+               </font>
+            </Button>
+            <Button mnemonicParsing="false" onAction="#tentangSI" prefHeight="44.0" prefWidth="137.0" text="TENTANG SI">
+               <font>
+                  <Font name="System Bold" size="15.0" />
+               </font>
+            </Button>
+            <Button mnemonicParsing="false" onAction="#contactAdmin" prefHeight="44.0" prefWidth="153.0" text="CONTACT ADMIN">
+               <font>
+                  <Font name="System Bold" size="15.0" />
+               </font>
+            </Button>
+        </items>
+      </ToolBar>
+      <Label layoutX="113.0" layoutY="15.0" prefHeight="32.0" prefWidth="522.0" text="Keluarga Mahasiswa Sistem Informasi">
+         <font>
+            <Font size="24.0" />
+         </font>
+      </Label>
+      <Label layoutX="113.0" layoutY="47.0" text="Institut Teknologi Del" textFill="#8a8a8a">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <ImageView fx:id="imageViewLogo" fitHeight="64.0" fitWidth="88.0" layoutX="16.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../../../../../../../../image/LOGO.png" />
+         </image>
+      </ImageView>
+      <TableView fx:id="TBPengumuman" layoutX="35.0" layoutY="150.0" prefHeight="285.0" prefWidth="729.0">
+        <columns>
+          <TableColumn fx:id="pengirim" prefWidth="140.0" text="Pengirim" />
+            <TableColumn fx:id="topik" prefWidth="412.0" text="Topik" />
+            <TableColumn fx:id="tanggal" prefWidth="124.0" text="Tanggal" />
+        </columns>
+      </TableView>
+      <TextArea fx:id="isiPengumumanTA" editable="false" layoutX="36.0" layoutY="469.0" prefHeight="216.0" prefWidth="729.0" promptText="isi pengumuman" />
+      <Hyperlink fx:id="linkUser" layoutX="700.0" layoutY="20.0" onAction="#animasiButton" text="iss14031">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Hyperlink>
+      <Button fx:id="btnChangePassword" defaultButton="true" layoutX="620.0" layoutY="20.0" mnemonicParsing="false" onAction="#ChangePassword" text="Change Password" visible="false">
+         <font>
+            <Font size="10.0" />
+         </font>
+      </Button>
+      <Button fx:id="btnLogOut" defaultButton="true" layoutX="720.0" layoutY="20.0" mnemonicParsing="false" onAction="#logOut" text="Log out" visible="false">
+         <font>
+            <Font size="10.0" />
+         </font>
+      </Button>
+   </children>
+</AnchorPane>

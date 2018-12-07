@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Hyperlink?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.ToolBar?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="700.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/8.0.65" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.kmsi.controller.ProfilController">
+   <children>
+      <ToolBar layoutX="-1.0" layoutY="79.0" prefHeight="54.0" prefWidth="800.0">
+        <items>
+          <Button mnemonicParsing="false" onAction="#home" prefHeight="44.0" prefWidth="70.0" text="HOME">
+               <font>
+                  <Font name="System Bold" size="15.0" />
+               </font>
+            </Button>
+            <Button mnemonicParsing="false" onAction="#pengmuman" prefHeight="44.0" prefWidth="148.0" text="PENGUMUMAN">
+               <font>
+                  <Font name="System Bold" size="15.0" />
+               </font>
+            </Button>
+            <Button mnemonicParsing="false" onAction="#forum" prefHeight="44.0" prefWidth="85.0" text="FORUM">
+               <font>
+                  <Font name="System Bold" size="15.0" />
+               </font>
+            </Button>
+            <Button defaultButton="true" mnemonicParsing="false" prefHeight="44.0" prefWidth="81.0" text="PROFIL">
+               <font>
+                  <Font name="System Bold" size="15.0" />
+               </font>
+            </Button>
+            <Button mnemonicParsing="false" onAction="#galery" prefHeight="44.0" prefWidth="88.0" text="GALERY">
+               <font>
+                  <Font name="System Bold" size="15.0" />
+               </font>
+            </Button>
+            <Button mnemonicParsing="false" onAction="#tentangSI" prefHeight="44.0" prefWidth="137.0" text="TENTANG SI">
+               <font>
+                  <Font name="System Bold" size="15.0" />
+               </font>
+            </Button>
+            <Button mnemonicParsing="false" onAction="#contactAdmin" prefHeight="44.0" prefWidth="153.0" text="CONTACT ADMIN">
+               <font>
+                  <Font name="System Bold" size="15.0" />
+               </font>
+            </Button>
+        </items>
+      </ToolBar>
+      <Label layoutX="113.0" layoutY="15.0" prefHeight="32.0" prefWidth="522.0" text="Keluarga Mahasiswa Sistem Informasi">
+         <font>
+            <Font size="24.0" />
+         </font>
+      </Label>
+      <Label layoutX="113.0" layoutY="47.0" text="Institut Teknologi Del" textFill="#8a8a8a">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <ImageView fx:id="imageViewLogo" fitHeight="64.0" fitWidth="88.0" layoutX="16.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../../../../../../../../image/LOGO.png" />
+         </image>
+      </ImageView>
+      <TabPane layoutX="33.0" layoutY="144.0" prefHeight="557.0" prefWidth="721.0" tabClosingPolicy="UNAVAILABLE">
+        <tabs>
+          <Tab text="Mahasiswa">
+            <content>
+              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="533.0" prefWidth="721.0">
+                     <children>
+                        <ComboBox fx:id="cboxCariAngkatan" layoutX="20.0" layoutY="15.0" onAction="#cariAngkatan" prefWidth="150.0" promptText="cari angkatan" />
+                        <ComboBox fx:id="cboxCariKelas" layoutX="20.0" layoutY="55.0" onAction="#cariKelas" prefWidth="150.0" promptText="cari kelas" />
+                        <TextField fx:id="nimTF" layoutX="20.0" layoutY="95.0" onAction="#cariBerdasarkanNim" promptText="cari nim" />
+                        <Button defaultButton="true" layoutX="182.0" layoutY="95.0" mnemonicParsing="false" onAction="#cariBerdasarkanNim" text="cari" />
+                        <TableView fx:id="TBMahasiswa" layoutX="266.0" layoutY="42.0" prefHeight="474.0" prefWidth="443.0">
+                          <columns>
+                            <TableColumn fx:id="nim" prefWidth="160.0" text="Nim" />
+                            <TableColumn fx:id="namaMhs" prefWidth="281.0" text="Nama" />
+                          </columns>
+                        </TableView>
+                        <Button defaultButton="true" layoutX="20.0" layoutY="135.0" mnemonicParsing="false" onAction="#semuaMahasiswa" text="semua mahasiswa" />
+                        <Button defaultButton="true" layoutX="563.0" layoutY="10.0" mnemonicParsing="false" onAction="#lihatProfilMhs" text="Lihat Profil Mahasiswa-&gt;" />
+                     </children>
+                  </AnchorPane>
+            </content>
+          </Tab>
+          <Tab text="Dosen">
+            <content>
+              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <TableView fx:id="TBDosen" layoutX="266.0" layoutY="42.0" prefHeight="474.0" prefWidth="443.0">
+                          <columns>
+                            <TableColumn fx:id="nid" prefWidth="160.0" text="Nid" />
+                            <TableColumn fx:id="namaDosen" prefWidth="281.0" text="Nama" />
+                          </columns>
+                        </TableView>
+                        <TextField fx:id="nidTF" layoutX="20.0" layoutY="15.0" onAction="#cariBerdasarkanNid" promptText="cari nid" />
+                        <Button defaultButton="true" layoutX="181.0" layoutY="15.0" mnemonicParsing="false" onAction="#cariBerdasarkanNid" text="cari" />
+                        <Button defaultButton="true" layoutX="20.0" layoutY="55.0" mnemonicParsing="false" onAction="#semuaDosen" text="semua dosen" />
+                        <Button defaultButton="true" layoutX="585.0" layoutY="10.0" mnemonicParsing="false" onAction="#lihatProfilDosen" text="Lihat Profil Dosen-&gt;" />
+                     </children>
+                  </AnchorPane>
+            </content>
+          </Tab>
+        </tabs>
+      </TabPane>
+      <Hyperlink fx:id="linkUser" layoutX="700.0" layoutY="20.0" onAction="#animasiButton" text="iss14031">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Hyperlink>
+      <Button fx:id="btnChangePassword" defaultButton="true" layoutX="620.0" layoutY="20.0" mnemonicParsing="false" onAction="#changePassword" text="Change Password" visible="false">
+         <font>
+            <Font size="10.0" />
+         </font>
+      </Button>
+      <Button fx:id="btnLogOut" defaultButton="true" layoutX="720.0" layoutY="20.0" mnemonicParsing="false" onAction="#logOut" text="Log out" visible="false">
+         <font>
+            <Font size="10.0" />
+         </font>
+      </Button>
+   </children>
+</AnchorPane>

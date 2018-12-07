@@ -1,0 +1,218 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Hyperlink?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.ToolBar?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="700.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/8.0.65" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.kmsi.controller.HomeAdminController">
+   <children>
+      <ToolBar layoutX="-1.0" layoutY="79.0" prefHeight="54.0" prefWidth="800.0">
+        <items>
+          <Button defaultButton="true" mnemonicParsing="false" prefHeight="44.0" prefWidth="70.0" text="HOME">
+               <font>
+                  <Font name="System Bold" size="15.0" />
+               </font>
+            </Button>
+            <Button mnemonicParsing="false" onAction="#pengumuman" prefHeight="44.0" prefWidth="148.0" text="PENGUMUMAN">
+               <font>
+                  <Font name="System Bold" size="15.0" />
+               </font>
+            </Button>
+            <Button mnemonicParsing="false" onAction="#forum" prefHeight="44.0" prefWidth="85.0" text="FORUM">
+               <font>
+                  <Font name="System Bold" size="15.0" />
+               </font>
+            </Button>
+            <Button mnemonicParsing="false" onAction="#profil" prefHeight="44.0" prefWidth="81.0" text="PROFIL">
+               <font>
+                  <Font name="System Bold" size="15.0" />
+               </font>
+            </Button>
+            <Button mnemonicParsing="false" onAction="#galery" prefHeight="44.0" prefWidth="88.0" text="GALERY">
+               <font>
+                  <Font name="System Bold" size="15.0" />
+               </font>
+            </Button>
+            <Button mnemonicParsing="false" onAction="#tentangSI" prefHeight="44.0" prefWidth="137.0" text="TENTANG SI">
+               <font>
+                  <Font name="System Bold" size="15.0" />
+               </font>
+            </Button>
+            <Button mnemonicParsing="false" onAction="#contactAdmin" prefHeight="44.0" prefWidth="153.0" text="CONTACT ADMIN">
+               <font>
+                  <Font name="System Bold" size="15.0" />
+               </font>
+            </Button>
+        </items>
+      </ToolBar>
+      <Label layoutX="113.0" layoutY="15.0" prefHeight="32.0" prefWidth="522.0" text="Keluarga Mahasiswa Sistem Informasi">
+         <font>
+            <Font size="24.0" />
+         </font>
+      </Label>
+      <Label layoutX="113.0" layoutY="47.0" text="Institut Teknologi Del" textFill="#8a8a8a">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <ImageView fx:id="imageViewLogo" fitHeight="64.0" fitWidth="88.0" layoutX="16.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../../../../../../../../image/LOGO.png" />
+         </image>
+      </ImageView>
+      <Hyperlink fx:id="linkPengumuman1" layoutX="430.0" layoutY="168.0" onAction="#pengumuman" text="Hyperlink" visible="false">
+         <font>
+            <Font name="Comic Sans MS Bold" size="13.0" />
+         </font>
+      </Hyperlink>
+      <Hyperlink fx:id="linkPengumuman2" layoutX="430.0" layoutY="203.0" onAction="#pengumuman" text="Hyperlink" visible="false">
+         <font>
+            <Font name="Comic Sans MS Bold" size="13.0" />
+         </font>
+      </Hyperlink>
+      <Hyperlink fx:id="linkPengumuman3" layoutX="430.0" layoutY="238.0" onAction="#pengumuman" text="Hyperlink" visible="false">
+         <font>
+            <Font name="Comic Sans MS Bold" size="13.0" />
+         </font>
+      </Hyperlink>
+      <Hyperlink fx:id="linkPengumuman5" layoutX="430.0" layoutY="308.0" onAction="#pengumuman" text="Hyperlink" visible="false">
+         <font>
+            <Font name="Comic Sans MS Bold" size="13.0" />
+         </font>
+      </Hyperlink>
+      <Hyperlink fx:id="linkPengumuman7" layoutX="430.0" layoutY="378.0" onAction="#pengumuman" text="Hyperlink" visible="false">
+         <font>
+            <Font name="Comic Sans MS Bold" size="13.0" />
+         </font>
+      </Hyperlink>
+      <Hyperlink fx:id="linkPengumuman8" layoutX="430.0" layoutY="413.0" onAction="#pengumuman" text="Hyperlink" visible="false">
+         <font>
+            <Font name="Comic Sans MS Bold" size="13.0" />
+         </font>
+      </Hyperlink>
+      <Hyperlink fx:id="linkPengumuman9" layoutX="430.0" layoutY="448.0" onAction="#pengumuman" text="Hyperlink" visible="false">
+         <font>
+            <Font name="Comic Sans MS Bold" size="13.0" />
+         </font>
+      </Hyperlink>
+      <Hyperlink fx:id="linkPengumuman10" layoutX="430.0" layoutY="483.0" onAction="#pengumuman" text="Hyperlink" visible="false">
+         <font>
+            <Font name="Comic Sans MS Bold" size="13.0" />
+         </font>
+      </Hyperlink>
+      <Hyperlink fx:id="linkPengumuman6" layoutX="430.0" layoutY="343.0" onAction="#pengumuman" text="Hyperlink" visible="false">
+         <font>
+            <Font name="Comic Sans MS Bold" size="13.0" />
+         </font>
+      </Hyperlink>
+      <Hyperlink fx:id="linkPengumuman4" layoutX="430.0" layoutY="273.0" onAction="#pengumuman" text="Hyperlink" visible="false">
+         <font>
+            <Font name="Comic Sans MS Bold" size="13.0" />
+         </font>
+      </Hyperlink>
+      <TextField fx:id="topikPengumumanTF" layoutX="430.0" layoutY="521.0" prefHeight="25.0" prefWidth="294.0" promptText="topik pengumuman" />
+      <TextArea fx:id="isiPengumumanTA" layoutX="430.0" layoutY="552.0" prefHeight="80.0" prefWidth="294.0" promptText="isi pengumuman" />
+      <Button defaultButton="true" layoutX="608.0" layoutY="640.0" mnemonicParsing="false" onAction="#addPengumuman" text="Add Pengumuman" />
+      <Label fx:id="labelPengirim1" layoutX="430.0" layoutY="160.0" text="Label" visible="false">
+         <font>
+            <Font name="Comic Sans MS" size="11.0" />
+         </font>
+      </Label>
+      <Label fx:id="labelPengirim2" layoutX="430.0" layoutY="195.0" text="Label" visible="false">
+         <font>
+            <Font name="Comic Sans MS" size="11.0" />
+         </font>
+      </Label>
+      <Label fx:id="labelPengirim3" layoutX="430.0" layoutY="230.0" text="Label" visible="false">
+         <font>
+            <Font name="Comic Sans MS" size="11.0" />
+         </font>
+      </Label>
+      <Label fx:id="labelPengirim4" layoutX="430.0" layoutY="265.0" text="Label" visible="false">
+         <font>
+            <Font name="Comic Sans MS" size="11.0" />
+         </font>
+      </Label>
+      <Label fx:id="labelPengirim6" layoutX="430.0" layoutY="335.0" text="Label" visible="false">
+         <font>
+            <Font name="Comic Sans MS" size="11.0" />
+         </font>
+      </Label>
+      <Label fx:id="labelPengirim7" layoutX="430.0" layoutY="370.0" text="Label" visible="false">
+         <font>
+            <Font name="Comic Sans MS" size="11.0" />
+         </font>
+      </Label>
+      <Label fx:id="labelPengirim5" layoutX="430.0" layoutY="300.0" text="Label" visible="false">
+         <font>
+            <Font name="Comic Sans MS" size="11.0" />
+         </font>
+      </Label>
+      <Label fx:id="labelPengirim8" layoutX="430.0" layoutY="405.0" text="Label" visible="false">
+         <font>
+            <Font name="Comic Sans MS" size="11.0" />
+         </font>
+      </Label>
+      <Label fx:id="labelPengirim10" layoutX="430.0" layoutY="475.0" text="Label" visible="false">
+         <font>
+            <Font name="Comic Sans MS" size="11.0" />
+         </font>
+      </Label>
+      <Label fx:id="labelPengirim9" layoutX="430.0" layoutY="440.0" text="Label" visible="false">
+         <font>
+            <Font name="Comic Sans MS" size="11.0" />
+         </font>
+      </Label>
+      <Hyperlink layoutX="30.0" layoutY="160.0" onAction="#entryData" text="Entry Data">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </Hyperlink>
+      <Label fx:id="labelPesanBaru" layoutX="30.0" layoutY="200.0" text="pesan baru">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </Label>
+      <TableView fx:id="TBPengirimPesan" layoutX="30.0" layoutY="224.0" prefHeight="286.0" prefWidth="252.0">
+        <columns>
+          <TableColumn fx:id="noID" prefWidth="41.0" text="No." />
+            <TableColumn fx:id="pengirim" prefWidth="210.0" text="Pengirim" />
+        </columns>
+      </TableView>
+      <TextArea fx:id="textAreaIsiPesan" editable="false" layoutX="30.0" layoutY="530.0" prefHeight="142.0" prefWidth="383.0" />
+      <Label layoutX="30.0" layoutY="509.0" text="isi pesan">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </Label>
+      <Hyperlink fx:id="linkUser" layoutX="700.0" layoutY="20.0" onAction="#animasiButton" text="iss14031">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Hyperlink>
+      <Button fx:id="btnLogout" defaultButton="true" layoutX="720.0" layoutY="20.0" mnemonicParsing="false" onAction="#logOut" text="Log out" visible="false">
+         <font>
+            <Font size="10.0" />
+         </font>
+      </Button>
+      <Label layoutX="428.0" layoutY="140.0" text="PENGUMUMAN">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </Label>
+      <Button fx:id="btnChangePassword" defaultButton="true" layoutX="620.0" layoutY="20.0" mnemonicParsing="false" onAction="#changePassword" text="Change Password" visible="false">
+         <font>
+            <Font size="10.0" />
+         </font>
+      </Button>
+   </children>
+</AnchorPane>
